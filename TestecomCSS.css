@@ -57,3 +57,12 @@ p input{
 img{
     border: 4px solid #1e90ff;   
 }
+
+button{
+    height: 40px;
+    width: 64px;
+}
+
+button p{
+    align-items: top;
+}
