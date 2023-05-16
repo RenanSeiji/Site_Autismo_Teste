@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="TestecomCSS.css" />
+    <link rel="stylesheet" href="TestecomCSS.css" />
 </head>
 <body>
      <!--barra de navegação-->
@@ -49,16 +50,27 @@
         width="150"
         height="150"
         >
-		  <p>Usuario: <input type="text" id="field1" value=""></p>
+		  <p>Usuario: <input type="text" id="username" value=""></p>
 		<br>
-        <p>Senha: <input type="text" id="field1" value=""></p>
+        <p>Senha: <input type="text" id="password" value=""></p>
 		<br>
-		<button onclick="myFunction()">
+		<button onclick="login()">
             <p>Concluir</p>
         </button>
 
         <footer>
             <p>RIMG &copy; 05/2023</p>
         </footer>
+
+        <script>
+            function login(){
+                var usuario = document.getElementById("username").value;
+                var senha = document.getElementById("password").value;
+
+                //if(usuario == "teste"){
+                alert("Bem vindo " + usuario);
+                //}
+            }
+        </script>
 </body>
 </html>
