@@ -24,10 +24,13 @@
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="contato.html">App</a></li>
         </ul>
+        
+        
     </nav>
     <div>
 
-        
+        <p>Saldo: </p>
+        <p id="demo"></p>
 
         <img
         src = "https://i0.wp.com/www.maispulseiras.com.br/wp-content/uploads/2022/07/1.png?fit=1471%2C1470&ssl=1"
@@ -37,7 +40,7 @@
         >
         <p>Pulseira padrão <br> R$15,00</p>
         <br>
-        <button onclick="myFunction()">
+        <button onclick="Pp()">
             <p>Comprar</p>
         </button>
         <br>
@@ -50,7 +53,7 @@
         >
         <p>Pulseira colorido <br> R$17,50</p>
         <br>
-        <button onclick="myFunction()">
+        <button onclick="Pc()">
             <p>Comprar</p>
         </button>
         <br>
@@ -64,7 +67,7 @@
         >
         <p>Pulseira com trava <br> R$20,00</p>
         <br>
-        <button onclick="myFunction()">
+        <button onclick="Pt()">
             <p>Comprar</p>
         </button>
         <br>
@@ -75,9 +78,9 @@
         width="150"
         height="150"
         >
-        <p>Pulseira personalizado R$75,00</p>
+        <p>Pulseira personalizado R$75,50</p>
         <br>
-        <button onclick="myFunction()">
+        <button onclick="Pper()">
             <p>Comprar</p>
         </button>
         <br>
@@ -87,9 +90,9 @@
         width="150"
         height="150"
         >
-        <p>Relogio R$100,00</p>
+        <p>Relogio R$99,90</p>
         <br>
-        <button onclick="myFunction()">
+        <button onclick="R()">
             <p>Comprar</p>
         </button>
     </div><!--
@@ -104,7 +107,66 @@
         <footer>
             <p>RIMG &copy; 05/2023</p>
         </footer>
+    <script>
+        var x = 100.00;
+        document.getElementById("demo").innerHTML = "R$ " + x;
 
+        function Pp(){ //valor para pulseira padrao é de 15 reais
+            if(x > 15.00){
+                alert("Obrigado por comprar Pulseira padrao");
+                x = x - 15.00;
+                document.getElementById("demo").innerHTML = "R$ " + x;
+            }
+            else{
+                alert("saldo insuficiente")
+            }
+        }
+
+        function Pc(){ //valor para pulseira colorida é de 17,50 reais
+            if(x > 17.50){
+                alert("Obrigado por comprar Pulseira colorida");
+                x = x - 17.50;
+                document.getElementById("demo").innerHTML = "R$ " + x;
+            }
+        else{
+                alert("saldo insuficiente")
+            }
+        }
+
+        function Pt(){ //valor para pulseira com trava é de 20 reais
+            if(x > 20.00){
+                alert("Obrigado por comprar Pulseira com trava");
+                x = x - 20.00;
+                document.getElementById("demo").innerHTML = "R$ " + x;
+            }
+        else{
+                alert("saldo insuficiente")
+            }
+        }
+
+        function Pper(){ //valor para pulseira personalizada é de 75,50 reais
+            if(x > 75.50){
+                alert("Obrigado por comprar Pulseira personalizada");
+                x = x - 75.50;
+                document.getElementById("demo").innerHTML = "R$ " + x;
+            }
+        else{
+                alert("saldo insuficiente")
+            }
+        }
+        
+        function R(){ //valor para Relogio é de 99,00 reais
+            if(x > 99.00){
+                alert("Obrigado por comprar Relogio");
+                x = x - 99.00;
+                document.getElementById("demo").innerHTML = "R$ " + x;
+            }
+        else{
+                alert("saldo insuficiente")
+            }
+        }
+
+    </script>
 
 </body>
 </html>
