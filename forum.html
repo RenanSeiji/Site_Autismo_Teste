@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Css_forum.css" />
+
 </head>
 <body>
      <!--barra de navegação-->
@@ -24,6 +25,13 @@
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="contato.html">App</a></li>
         </ul>
+        <img
+        src="https://gcpstorage.caxias.rs.gov.br/images/2022/06/9308a6ea-73b0-4758-bd3e-2416583126fd_1200.png"
+        alt="titulo da imagem"
+        onclick="myFunction()"
+        width="35" 
+        height="35"
+        >
     </nav>
     <h3>Mande sua duvida aqui</h3>
     <div>
@@ -37,5 +45,12 @@
         <footer>
             <p>RIMG &copy; 05/2023</p>
         </footer>
+
+        <script>
+            function myFunction() {
+               var element = document.body;
+               element.classList.toggle("white-mode");
+            }
+        </script>
 </body>
 </html>

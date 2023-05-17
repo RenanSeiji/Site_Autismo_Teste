@@ -6,6 +6,10 @@ body{
     padding: 0px;
     margin: 0px;
 }
+.white-mode {
+    background-color: #fff;
+    color: #333;
+  }
 
 nav {
     display:flex;
