@@ -23,14 +23,14 @@
             <li><a href="loja.html">Produtos</a></li>
             <li><a href="forum.html">Fórum</a></li>
             <li><a href="sobre.html">Sobre</a></li> 
-            <li><a href="contato.html">App</a></li> <!--Trocar contato para "como usar"-->
+            <li><a href="contato.html">App</a></li> 
         </ul>
     </nav>
 
     <div>
         <section>
-            <h1>Seja bem vindo a loja virtual</h1>
-            <h2>Autismo não se cura<br> se compreende</h2>
+            <h1>Seja bem vindo a loja virtual <h1 id="nome"> </h1> 
+            <h2>Autismo não se cura <br> se compreende</h2>
         </section>
     </div>
         <img
@@ -53,13 +53,17 @@
         >
 		  <p>Usuario: <input type="text" id="username" value=""></p>
 		<br>
-        <p>Senha: <input type="password" id="password" value=""><input type="checkbox" onclick="funcaopass()">Show Password</p>
-        
+        <p>Senha: <input type="password" id="password" value=""><br><input type="checkbox" onclick="funcaopass()">Show Password</p>
 
 		<br>
 		<button onclick="login()">
             <p>Concluir</p>
         </button>
+
+        <button onclick="cadastro()">
+            <p>Cadastro</p>
+        </button>
+        <br>
 
         <footer>
             <p>RIMG &copy; 05/2023</p>
@@ -67,10 +71,10 @@
 
         <script>
 
-            user = ["renan", "isa", "gian","maru"];
+            user = ["renan", "isabelle", "giancarlos","maruan"];
             pass = ["teste123", "1234", "abcd", "teste apenas"];
 
-            function funcaopass() {
+            function funcaopass() {//funcao do checkbox do password
                 var x = document.getElementById("password");
                 if (x.type === "password") {
                     x.type = "text";
@@ -81,19 +85,21 @@
             function login(){
                 var usuario = document.getElementById("username").value;
                 var senha = document.getElementById("password").value;
-                var y = 1;
-                let tamanho = user.length;
 
                 if(user.indexOf(usuario) == pass.indexOf(senha) && pass.indexOf(senha) != -1){  //.include vai fazer uma varredura para encontrar
                     alert("Bem vindo " + usuario); //ou seja se colocar o user como gian ele vai achar nos valores de 0 ate 2
+                    document.getElementById("nome").innerHTML = usuario;
                 }
                 else{
-                    alert("Dados nao encontrado")
+                    alert("Dados nao encontrado");
                 }
+            }
 
-                //if(usuario == "teste"){
-                //alert("Bem vindo " + usuario);
-                //}
+            function cadastro(){
+                user[user.length] = document.getElementById("username").value;
+                pass[pass.length] = document.getElementById("password").value;
+                alert("Cadastro");
+                
             }
         </script>
 </body>

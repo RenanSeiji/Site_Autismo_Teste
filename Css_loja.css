@@ -64,11 +64,17 @@ img{
 button{
     height: 40px;
     width: 70px;
+    margin-bottom: 1%;
 }
 
 button p{
     text-align: top;
     white-space: pre-wrap;
     font-family: 'Times New Roman', Times, serif;
+    
+}
+
+div p1{
+    margin-bottom: 10%;
     
 }

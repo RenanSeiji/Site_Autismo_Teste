@@ -61,6 +61,8 @@ img{
 button{
     height: 40px;
     width: 64px;
+    margin: 0.3%;
+
 }
 
 button p{

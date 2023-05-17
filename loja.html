@@ -29,9 +29,8 @@
     </nav>
     <div>
 
-        <p>Saldo: </p>
-        <p id="saldo"></p>
-
+        <p1>Saldo: <p1 id="saldo"></p1></p1>
+        <br>
         <img
         src = "https://i0.wp.com/www.maispulseiras.com.br/wp-content/uploads/2022/07/1.png?fit=1471%2C1470&ssl=1"
         alt = "Imagem peramente ilustrativa"
@@ -107,63 +106,80 @@
         <footer>
             <p>RIMG &copy; 05/2023</p>
         </footer>
+
     <script>
         var x = 100.00;
         document.getElementById("saldo").innerHTML = "R$ " + x;
 
+        
+
         function Pp(){ //valor para pulseira padrao é de 15 reais
-            if(x > 15.00){
-                alert("Obrigado por comprar Pulseira padrao");
-                x = x - 15.00;
-                document.getElementById("saldo").innerHTML = "R$ " + x;
-            }
-            else{
-                alert("saldo insuficiente")
+            if(confirm("Deseja comprar a Pulseira Padrao?") == true){
+                if(x > 15.00){
+                    alert("Obrigado por comprar Pulseira padrao");
+                    x = x - 15.00;
+                    document.getElementById("saldo").innerHTML = "R$ " + x;
+                
+                }
+                else{
+                    alert("saldo insuficiente")
+                }
             }
         }
-
         function Pc(){ //valor para pulseira colorida é de 17,50 reais
-            if(x > 17.50){
-                alert("Obrigado por comprar Pulseira colorida");
-                x = x - 17.50;
-                document.getElementById("saldo").innerHTML = "R$ " + x;
+            if(confirm("Deseja comprar a Pulseira Colorida?") == true){
+                if(x > 17.50){
+                    alert("Obrigado por comprar Pulseira colorida");
+                    x = x - 17.50;
+                    document.getElementById("saldo").innerHTML = "R$ " + x;
+                }
+                else{
+                    alert("saldo insuficiente")
+                }
             }
-        else{
-                alert("saldo insuficiente")
-            }
+
         }
 
         function Pt(){ //valor para pulseira com trava é de 20 reais
-            if(x > 20.00){
-                alert("Obrigado por comprar Pulseira com trava");
-                x = x - 20.00;
-                document.getElementById("saldo").innerHTML = "R$ " + x;
+            if(confirm("Deseja comprar a Pulseira com Trava?") == true){
+                if(x > 20.00){
+                    alert("Obrigado por comprar Pulseira com trava");
+                    x = x - 20.00;
+                    document.getElementById("saldo").innerHTML = "R$ " + x;
+                }
+                else{
+                    alert("saldo insuficiente")
+                }
             }
-        else{
-                alert("saldo insuficiente")
-            }
+
         }
 
         function Pper(){ //valor para pulseira personalizada é de 75,50 reais
-            if(x > 75.50){
-                alert("Obrigado por comprar Pulseira personalizada");
-                x = x - 75.50;
-                document.getElementById("saldo").innerHTML = "R$ " + x;
+            if(confirm("Deseja comprar a Pulseira Personalizada?") == true){
+                if(x > 75.50){
+                    alert("Obrigado por comprar Pulseira personalizada");
+                    x = x - 75.50;
+                    document.getElementById("saldo").innerHTML = "R$ " + x;
+                }
+                else{
+                    alert("saldo insuficiente")
+                }
             }
-        else{
-                alert("saldo insuficiente")
-            }
+
         }
         
         function R(){ //valor para Relogio é de 99,00 reais
-            if(x > 99.00){
-                alert("Obrigado por comprar Relogio");
-                x = x - 99.00;
-                document.getElementById("saldo").innerHTML = "R$ " + x;
-            }
-        else{
+            if(confirm("Deseja comprar o Relogio?") == true){
+                if(x > 99.00){
+                    alert("Obrigado por comprar Relogio");
+                    x = x - 99.00;
+                    document.getElementById("saldo").innerHTML = "R$ " + x;
+                }
+            else{
                 alert("saldo insuficiente")
             }
+            }
+        
         }
 
     </script>
