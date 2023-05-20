@@ -59,11 +59,19 @@
 		<button onclick="login()">
             <p>Concluir</p>
         </button>
-
-        <button onclick="cadastro()">
-            <p>Cadastro</p>
-        </button>
         <br>
+        <body onload="createCaptcha()">
+            <form onsubmit="validateCaptcha()">
+              <div id="captcha">
+              </div>
+              <input type="text" placeholder="Captcha" id="cpatchaTextBox"/>
+              <br><button type="submit">Cadastro </button>
+              <script src = "captcha.js",id="canvas"></script>
+            </form>
+            <button onclick="cadastro()">
+                <p>Trocar</p>
+            </button>
+        </body>
 
         <footer>
             <p>RIMG &copy; 05/2023</p>

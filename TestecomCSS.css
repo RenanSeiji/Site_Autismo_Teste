@@ -68,3 +68,7 @@ button{
 button p{
     align-items: top;
 }
+
+canvas{
+    pointer-events:none;
+}
